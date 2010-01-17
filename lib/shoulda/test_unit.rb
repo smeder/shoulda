@@ -6,7 +6,10 @@ require 'shoulda/assertions'
 require 'shoulda/macros'
 require 'shoulda/helpers'
 require 'shoulda/autoload_macros'
-require 'shoulda/rails' if defined? RAILS_ROOT
+
+if (defined?(Rails.root) && Rails.root) || defined?(RAILS_ROOT)
+  require 'shoulda/rails'
+end
 
 module Test # :nodoc: all
   module Unit
