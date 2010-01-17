@@ -41,13 +41,7 @@ module Shoulda # :nodoc:
       stmt << " to #{to.inspect}" if to
       stmt << " by #{by.inspect}" if by
 
-      if block_given?
-        code = block
-      else
-        warn "[DEPRECATION] should_change(expression, options) is deprecated. " <<
-             "Use should_change(description, options) { code } instead."
-        code = lambda { eval(description) }
-      end
+      code = block
       before = lambda { @_before_should_change = code.bind(self).call }
       should stmt, :before => before do
         old_value = @_before_should_change
