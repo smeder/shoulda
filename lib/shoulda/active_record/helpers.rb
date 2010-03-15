@@ -18,6 +18,7 @@ module Shoulda # :nodoc:
       def default_error_message(key, values = {})
         if Object.const_defined?(:I18n) # Rails >= 2.2
           # In Rails 3.0 beta the messages moved to ActiveModel which seems to have a buggy namespace for its messages
+          values[:default] = nil
           message = I18n.translate("errors.messages.#{key}", values)
           if message.nil?
             # if the message is not a ActiveModel message try ActiveRecord
