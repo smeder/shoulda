@@ -17,7 +17,13 @@ module Shoulda # :nodoc:
       #   default_error_message(:too_long, :count => 60)
       def default_error_message(key, values = {})
         if Object.const_defined?(:I18n) # Rails >= 2.2
-          I18n.translate("activerecord.errors.messages.#{key}", values)
+          # In Rails 3.0 beta the messages moved to ActiveModel which seems to have a buggy namespace for its messages
+          message = I18n.translate("errors.messages.#{key}", values)
+          if message.nil?
+            # if the message is not a ActiveModel message try ActiveRecord
+            message = I18n.translate("activerecord.errors.messages.#{key}", values)
+          end
+          message
         else # Rails <= 2.1.x
           ::ActiveRecord::Errors.default_error_messages[key] % values[:count]
         end
