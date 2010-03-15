@@ -1,1 +1,1 @@
-load File.join(File.dirname(__FILE__), "shoulda", "tasks.rb")
+load File.join(File.dirname(__FILE__), "..", "shoulda", "tasks.rb")
