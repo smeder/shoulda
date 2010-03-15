@@ -61,7 +61,7 @@ module Shoulda # :nodoc:
           @instance.valid?
           @errors = @instance.errors[@attribute]
           @errors = [@errors] unless @errors.is_a?(Array)
-          @expected_message ? (errors_match_regexp? || errors_match_string?) : (@errors != [nil])
+          @expected_message ? (errors_match_regexp? || errors_match_string?) : (@errors != [nil] || !@errors.empty?)
         end
 
         def errors_match_regexp?
