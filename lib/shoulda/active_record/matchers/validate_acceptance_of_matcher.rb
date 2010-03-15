@@ -7,7 +7,7 @@ module Shoulda # :nodoc:
       #
       # Options:
       # * <tt>with_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. Regexp or string.  Defaults to the
+      #   <tt>errors[:attribute]</tt>. Regexp or string.  Defaults to the
       #   translation for <tt>:accepted</tt>.
       #
       # Example:

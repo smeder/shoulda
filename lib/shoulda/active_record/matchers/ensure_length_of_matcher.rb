@@ -9,13 +9,13 @@ module Shoulda # :nodoc:
       # * <tt>is_at_most</tt> - maximum length of this attribute
       # * <tt>is_equal_to</tt> - exact requred length of this attribute
       # * <tt>with_short_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. Regexp or string.  Defaults to the
+      #   <tt>errors[:attribute]</tt>. Regexp or string.  Defaults to the
       #   translation for :too_short.
       # * <tt>with_long_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. Regexp or string.  Defaults to the
+      #   <tt>errors[:attribute]</tt>. Regexp or string.  Defaults to the
       #   translation for :too_long.
       # * <tt>with_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. Regexp or string.  Defaults to the
+      #   <tt>errors[:attribute]</tt>. Regexp or string.  Defaults to the
       #   translation for :wrong_length. Used in conjunction with
       #   <tt>is_equal_to</tt>.
       #

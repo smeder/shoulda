@@ -16,7 +16,7 @@ module Shoulda # :nodoc:
       # Options:
       #
       # * <tt>with_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. <tt>Regexp</tt> or <tt>String</tt>.
+      #   <tt>errors[:attribute]</tt>. <tt>Regexp</tt> or <tt>String</tt>.
       #   Defaults to the translation for <tt>:taken</tt>.
       # * <tt>scoped_to</tt> - field(s) to scope the uniqueness to.
       # * <tt>case_insensitive</tt> - ensures that the validation does not

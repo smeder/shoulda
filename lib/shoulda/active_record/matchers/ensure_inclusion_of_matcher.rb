@@ -7,10 +7,10 @@ module Shoulda # :nodoc:
       # Options:
       # * <tt>in_range</tt> - the range of allowed values for this attribute
       # * <tt>with_low_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. Regexp or string. Defaults to the
+      #   <tt>errors[:attribute]</tt>. Regexp or string. Defaults to the
       #   translation for :inclusion.
       # * <tt>with_high_message</tt> - value the test expects to find in
-      #   <tt>errors.on(:attribute)</tt>. Regexp or string. Defaults to the
+      #   <tt>errors[:attribute]</tt>. Regexp or string. Defaults to the
       #   translation for :inclusion.
       #
       # Example:

@@ -26,7 +26,7 @@ module Shoulda # :nodoc:
       # Ensures that the model cannot be saved if one of the attributes listed is not present.
       #
       # Options:
-      # * <tt>:message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.blank')</tt>
       #
       # Example:
@@ -48,7 +48,7 @@ module Shoulda # :nodoc:
       #
       # Options:
 
-      # * <tt>:message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.taken')</tt>
       # * <tt>:scoped_to</tt> - field(s) to scope the uniqueness to.
       # * <tt>:case_sensitive</tt> - whether or not uniqueness is defined by an
@@ -124,9 +124,9 @@ module Shoulda # :nodoc:
       # Ensures that the attribute cannot be set to the given values
       #
       # Options:
-      # * <tt>:message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string. If omitted, the test will pass if there is ANY error in
-      #   <tt>errors.on(:attribute)</tt>.
+      #   <tt>errors[:attribute]</tt>.
       #
       # Example:
       #   should_not_allow_values_for :isbn, "bad 1", "bad 2"
@@ -159,9 +159,9 @@ module Shoulda # :nodoc:
       # Ensures that the length of the attribute is in the given range
       #
       # Options:
-      # * <tt>:short_message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:short_message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.too_short') % range.first</tt>
-      # * <tt>:long_message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:long_message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.too_long') % range.last</tt>
       #
       # Example:
@@ -185,7 +185,7 @@ module Shoulda # :nodoc:
       # Ensures that the length of the attribute is at least a certain length
       #
       # Options:
-      # * <tt>:short_message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:short_message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.too_short') % min_length</tt>
       #
       # Example:
@@ -206,7 +206,7 @@ module Shoulda # :nodoc:
       # Ensures that the length of the attribute is exactly a certain length
       #
       # Options:
-      # * <tt>:message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.wrong_length') % length</tt>
       #
       # Example:
@@ -226,9 +226,9 @@ module Shoulda # :nodoc:
       # Ensure that the attribute is in the range specified
       #
       # Options:
-      # * <tt>:low_message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:low_message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.inclusion')</tt>
-      # * <tt>:high_message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:high_message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.inclusion')</tt>
       #
       # Example:
@@ -252,7 +252,7 @@ module Shoulda # :nodoc:
       # Ensure that the attribute is numeric
       #
       # Options:
-      # * <tt>:message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.not_a_number')</tt>
       #
       # Example:
@@ -447,7 +447,7 @@ module Shoulda # :nodoc:
       # Ensures that the model cannot be saved if one of the attributes listed is not accepted.
       #
       # Options:
-      # * <tt>:message</tt> - value the test expects to find in <tt>errors.on(:attribute)</tt>.
+      # * <tt>:message</tt> - value the test expects to find in <tt>errors[:attribute]</tt>.
       #   Regexp or string.  Default = <tt>I18n.translate('activerecord.errors.messages.accepted')</tt>
       #
       # Example:
