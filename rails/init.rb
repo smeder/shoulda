@@ -1,4 +1,4 @@
-if RAILS_ENV == 'test'
+if Rails.env == 'test'
   if defined? Spec
     require 'shoulda/rspec'
   else
